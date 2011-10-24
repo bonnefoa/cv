@@ -1,121 +1,147 @@
-\documentclass[a4paper,11pt]{article}
-\usepackage[francais]{babel}  
-\usepackage[utf8]{inputenc}   
-\usepackage[T1]{fontenc}       
-\usepackage{url}
-\pagestyle{empty}    
-\usepackage{vmargin} 
-\setmarginsrb{2cm}{2cm}{2cm}{2cm}{0cm}{0cm}{0cm}{0cm}
-% Marge gauche, haute, droite, basse; espace entre la marge et le texte à
-% gauche, en  haut, à droite, en bas
-\newcommand\espace{\vrule height 20pt width 0pt}
-\newcommand{\titre}[1]{%
-	\begin{center}
-	\bigskip
-	\rule{\textwidth}{1pt}
-	\par\vspace{0.1cm}
-        \textbf{\LARGE #1}
-	\par\rule{\textwidth}{1pt}
-	\end{center}
-	\bigskip
+\documentclass[11pt,a4paper]{moderncv}
+
+\usepackage{verbatim}
+
+% moderncv themes
+\moderncvtheme[blue]{classic}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+%\moderncvtheme[grey]{classic}                % idem
+
+% character encoding
+\usepackage[utf8]{inputenc}
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\AtBeginDocument{\setlength{\maketitlenamewidth}{9cm}}
+\AtBeginDocument{\recomputelengths}
+
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand\espace{\vspace{10pt}}
+
+% personal data
+\firstname{Anthonin}
+\familyname{Bonnefoy}
+\title{Software engineer}
+\address{street}{city}
+\mobile{tel}
+\email{anthonin.bonnefoy@gmail.com}
+\extrainfo{github: \url{http://github.com/bonnefoa}}
+
+\nopagenumbers{}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+%----------------------------------------------------------------------------------
+\section{Education}
+
+\cventry{2006--2009}{Computer engineer}{ISIMA}{Clermont-Ferrand}{France}{}
+\cvline{}{Graduate at \textbf{ISIMA} (\textbf{I}nstitut \textbf{S}upérieur d'\textbf{I}nformatique, de \textbf{M}odélisation et de leurs \textbf{A}pplications), a Computer Science Engineering College}
+\cventry{2004--2006}{Intensive scientific preparation}{Lycée Champollion}{Grenoble}{France}{}
+\cvline{}{Preparation for national competitive entrance exams into French engineering colleges}
+\cventry{2004}{Obtained a scientific Baccalauréat with honors}{Lycée Albert Triboulet}{Romans}{France}{}
+%----------------------------------------------------------------------------------
+
+\espace
+
+%----------------------------------------------------------------------------------
+
+\section{Experience}
+
+\cventry{2010 -- current}{MLState}{Paris, France}{R\&D engineer}{}{
+	\begin{itemize}
+    \resitem{Added functionalities in the OPA standard library}
+    \resitem{Developed web applications for MLState customers}
+    \resitem{Configuration, administration and monitoring of servers}
+    \resitem{\textit{Tools} : Vim, Ocaml, Git, Nagios3, Munin, HAProxy, Erlang, Mnesia}
+	\end{itemize}
 }
 
-%###################
-\begin{document}
-%###################
-\begin{center}
-\par\textbf{\huge Curriculum Vitae}
-\end{center}
-
-\vspace{1.5cm}
-
-
-\begin{minipage}{0.48\linewidth}
-\begin{flushleft}
-Anthonin Bonnefoy\\
-\end{flushleft}
-\end{minipage}
-\hfill
-\begin{minipage}{0.48\linewidth}
-\begin{flushright}
-Nationalité française \\
-23 ans, célibataire
-\end{flushright}
-\end{minipage}
-
-\titre{Formation}
-%#############
-
-\begin{tabular}{c@{ }p{0.8\textwidth}}
-
-\textbf{2006--2009} &  École d'ingénieurs \textbf{ISIMA} (\textbf{I}nstitut \textbf{S}upérieur d'\textbf{I}nformatique, de \textbf{M}odélisation et de leurs \textbf{A}pplications) à Clermont-Ferrand (63)\\
-& Option : Génie logiciel et Systèmes Informatiques\\
-
-\textbf{2004--2006} &  Classe préparatoire aux grandes école\\
-&  Filières \textbf{PSI} à Champollion, Grenoble (38)\\
-
-\textbf{2003-2006} &  Baccalauréat \textbf{S}, mention bien
-
-\end{tabular}
-
-\titre{Compétences}
-\begin{itemize} 
-\item \textbf{Systèmes} : Linux, Unix, BSD 
-\item \textbf{Développement} : Java, Scala, Haskell, Lua
-\item \textbf{Frameworks Java} : Spring, Hibernate, Google Web Toolkit, PicoContainer
-\item \textbf{Gestion de version} : Git, Subversion
-\item \textbf{Base de données} : MySQL, PostgreSQL
-\item \textbf{Méthodes} : Refactoring, TDD
-\item \textbf{Langues} : Anglais : TOEIC 920 \hfil  Espagnol : notions \hfil Japonais : notions
-\end{itemize}
-
-\titre{Expériences et projets}
-
-\begin{tabular}{l@{ }p{0.8\textwidth}}
-Projet 2010 & \textbf{Despote sur IzPack}\\
-&Refonte et refactoring du code pour la version 5 \\
-&Ajout de tests automatiques \\
-&Remplacement de Ant par Maven pour la gestion du build\\
-&Introduction d'un framework d'injection de dépendance\\
-& \textit{Cadre} : Projet Open Source (Fondation Codehaus) \\
-& \textit{Outils} : IntelliJ, Java, Git, PicoContainer, Fest-Swing \\
 \espace
-Emploi 2009-2010 & \textbf{Ingénieur d'étude} \\
-& Travail d'expertise sur les tests automatiques \\
-& Support sur l'utilisation de maven et de la forge logicielle \\
-& \textit{Cadre} : Orange Business Services \\
-\espace
-Stage 2009 & \textbf{Études des outils de tests Java et de la forge logicielle} \\
-& Évaluation des outils pour des tests unitaires, d'intégrations, fonctionnelles et de performances \\
-& Étude, amélioration et installation de forge logicielle \\
-& Rédaction d'un support de formation pour Maven2 \\
-& \textit{Cadre} : Orange Business Services \\
-& \textit{Outils} : Maven, Junit, TestNG, Mockito, dbunit, Selenium, Fest-swing, JBehave, JMeter\\
-\espace 
-Projet 2008/2009 & \textbf{Refactoring de IzPack} \\ 
-& Suppression de la dépendance a nanoXML \\
-& \textit{Cadre} : Projet Open Source \\
-& \textit{Outils} : IntelliJ, Java, Git, Methode agile \\
-\espace
-Stage 2008 & \textbf{Participation a l'élaboration du site de Météo France}  \\
-& Développement de brique de l'espace service \\ 
-& \textit{Cadre} : Atos WorldLine, Lyon (69) \\
-& \textit{Outils} : Spring, Tapestry, Hibernate, Maven2, Integration Continue \\ 
-\espace
-Projet 2007/2008 & \textbf{Étude du framework Google Web Toolkit} \\
-& Avantages et inconvénients du framework \\
-& Application de l'étude à la création d'un agenda Web dynamique \\ 
-& \textit{Cadre} : Reflex Training (63) \\
-& \textit{Outils} : Eclipse, Java, GWT \\
 
-\end{tabular}
+\cventry{2009 -- 2010}{Orange Business Services}{Rennes, France}{Software engineer}{}{
+	\begin{itemize}
+    \resitem{Technical support on Maven and on Software Forge}
+    \resitem{Provided Java training}
+    \resitem{Worked on the identity management project for a centralized medical imagery system}
+    \resitem{\textit{Tools} : Hudson, Sonar, Maven, Spring, Hibernate, Nexus, Ldap}
+	\end{itemize}
+}
 
-\titre{Expériences diverses}
-\begin{tabular}{ll}
-Vie associative :& Président du \textbf{Rezzo}, club organisant des soirées réseaux a l'ISIMA \\
-& Vice-secrétaire du \textbf{LVDIC}, club de jeux de sociétés et de jeux de rôles \\
-Sport pratiqué :& Basket (6 ans)
-\end{tabular}
+\espace
+
+\cventry{Apr.--Sep. 2009}{Orange Business Services}{Rennes, France}{Internship - Study of Java test tools and Software forge}{}{
+	\begin{itemize}
+    \resitem{Wrote the Maven training slides}
+    \resitem{Studied, enhanced and installed of Software forges}
+    \resitem{Evaluation of automated Java test tools (unit tests, functional tests...)}
+    \resitem{\textit{Tools} : Hudson, Sonar, Maven, Junit, TestNG, Mockito, DBUnit}
+	\end{itemize}
+}
+
+\espace
+
+\cventry{Apr.--Sep. 2008}{Atos Worldline}{Lyon, France}{Internship - Development of Meteo France site web}{}{
+	\begin{itemize}
+    \resitem{Development of the commercial part of the site : Presentation, configuration and utilisation of Meteo France products}
+    \resitem{Added functionalities to the back-office}
+    \resitem{\textit{Tools} : Tapestry, Spring, Hibernate, Maven, Continuous integration}
+	\end{itemize}
+}
+
+%----------------------------------------------------------------------------------
+
+\espace
+
+%----------------------------------------------------------------------------------
+
+\section{Open Source projects}
+
+\cventry{2010-2011}{Shaker}{}{Interactive build-tool for Haskell projects}{}{
+	\begin{itemize}
+    \resitem{Created Shaker, an interactive build-tool in Haskell which allows to rapidly compile a Haskell project using GHC internals}
+    \resitem{\textit{Tools} : Haskell, Quickcheck, GHC, Cabal}
+	\end{itemize}
+}
+
+\espace
+
+\cventry{2009-2011}{IzPack}{Contributions}{}{}{
+	\begin{itemize}
+    \resitem{Changed IzPack code base to be more modular}
+    \resitem{Replaced old Ant build system by Maven}
+    \resitem{Wrote regression test suite}
+    \resitem{Added a dependency injection framework}
+    \resitem{Replaced nanoXML by the xml parser provided by the JDK}
+    \resitem{\textit{Tools} : IntelliJ, Maven, Junit, Mockito, Picocontainer, YourKit}
+	\end{itemize}
+}
+
+%----------------------------------------------------------------------------------
+
+\espace
+
+%----------------------------------------------------------------------------------
+
+\section{Computer skills}
+\cvline{Languages}{Java, Haskell, Erlang, Python, Web (XHTML, CSS, javascript), C}
+\cvline{Systems}{Linux (Archlinux, Debian, Gentoo), FreeBSD}
+\cvline{Databases}{Mnesia, PostgreSQL, MySQL}
+\cvline{IDE}{IntelliJ, Vim}
+\cvline{Methods}{Refactoring, TDD, Continuous integration}
+\cvline{Java libraries}{Spring, Hibernate, Tapestry, Junit, TestNG, Mockito, DBunit, FEST-swing}
+\cvline{Java tools}{Maven, TeamCity, Hudson, Sonar, YourKit, Nexus}
+\cvline{System tools}{Nagios3, Munin, HAProxy}
+
+\section{Languages}
+\cvline{French}{Mother tongue}
+\cvline{Anglais}{TOEIC 920}
+\cvline{Japanese}{Beginner}
+\cvline{Spanish}{Notions}
+
+%\section{Hobbies}
+%\cvline{}{Reading, Role-playing games, video games}
 
 \end{document}
 
