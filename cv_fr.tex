@@ -1,0 +1,152 @@
+\documentclass[11pt,a4paper]{moderncv}
+
+\usepackage{verbatim}
+
+\moderncvtheme[blue]{classic}
+\usepackage[utf8]{inputenc}
+
+\usepackage[scale=0.8]{geometry}
+\AtBeginDocument{\setlength{\maketitlenamewidth}{9cm}}
+\AtBeginDocument{\recomputelengths}
+
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand\espace{\vspace{10pt}}
+
+\firstname{Anthonin}
+\familyname{Bonnefoy}
+\title{Ingénieur développement}
+\address{addresse}{ville}
+\mobile{tel}
+\email{anthonin.bonnefoy@gmail.com}
+\extrainfo{github: \url{http://github.com/bonnefoa}}
+
+\nopagenumbers{}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+%----------------------------------------------------------------------------------
+\section{Éducation}
+
+\cventry{2006--2009}{Ingénieur informatique}{ISIMA}{Clermont-Ferrand}{France}{}
+\cvline{}{École d'ingénieurs \textbf{ISIMA} (\textbf{I}nstitut \textbf{S}upérieur d'\textbf{I}nformatique, de \textbf{M}odélisation et de leurs \textbf{A}pplications)}
+\cventry{2004--2006}{Classes préparatoire aux grandes écoles}{Lycée Champollion}{Grenoble}{France}{}
+\cventry{2004}{Baccalauréat \textbf{S}, mention bien}{Lycée Albert Triboulet}{Romans}{France}{}
+%----------------------------------------------------------------------------------
+
+\espace
+
+%----------------------------------------------------------------------------------
+
+\section{Expériences}
+
+\cventry{2011 -- 2013}{Mesagraph}{Paris, France}{Ingénieur développement}{}{
+	\begin{itemize}
+    \resitem{Design et réalisation du backend pour la captation, le traitement et le stockage des tweets captes}
+    \resitem{Ajout et optimisation de méthodes sur l'api meaningly}
+    \resitem{Écriture des map reduces pour l'analyse des tweets (détection de hashtags, indexation des tweets)}
+    \resitem{Ajout de fonctionnalités sur le site de meaningly}
+    \resitem{Monitoring et administration de la plateforme Mesagraph}
+    \resitem{\textit{Languages}: Python, Java, Bash}
+    \resitem{\textit{Tools}: Vim, Git, Cacti, Lucene, Solr, Nagios, Hadoop, HAProxy, HBase, Varnish, RabbitMQ, Redis}
+	\end{itemize}
+}
+
+\cventry{2010 -- 2011}{MLState}{Paris, France}{Ingénieur R\&D}{}{
+	\begin{itemize}
+    \resitem{Ajout de fonctionnalités dans la librairie standard OPA}
+    \resitem{Développement d'application web pour les clients de MLState}
+    \resitem{Monitoring et administration des serveurs}
+    \resitem{\textit{Languages}: Ocaml, Erlang, OPA}
+    \resitem{\textit{Tools}: Vim, Git, Nagios, Munin, HAProxy, Mnesia}
+	\end{itemize}
+}
+
+\espace
+
+\cventry{2009 -- 2010}{Orange Business Services}{Rennes, France}{Ingénieur d'étude}{}{
+	\begin{itemize}
+    \resitem{Support technique sur l'utilisation de Maven et de la forge logicielle}
+    \resitem{Dispense de formation Java}
+    \resitem{Travail sur le projet de gestion d'identité pour un système d'imagerie médicale centralisée}
+    \resitem{\textit{Languages}: Java}
+    \resitem{\textit{Tools}: Hudson, Sonar, Maven, Spring, Hibernate, Nexus, Ldap}
+	\end{itemize}
+}
+
+\espace
+
+\cventry{Avr.--Sep. 2009}{Orange Business Services}{Rennes, France}{Stage - Études des outils de tests Java et de la forge logicielle}{}{
+	\begin{itemize}
+    \resitem{Rédaction d'un support de formation pour Maven}
+    \resitem{Étude, amélioration et installation de forges logicielles}
+    \resitem{Évaluation des outils de tests automatiques (unitaires, fonctionnels...)}
+    \resitem{\textit{Languages}: Java}
+    \resitem{\textit{Tools}: Hudson, Sonar, Maven, Junit, TestNG, Mockito, DBUnit}
+	\end{itemize}
+}
+
+\espace
+
+\cventry{Avr.--Sep. 2008}{Atos Worldline}{Lyon, France}{Stage - Développement du site de Météo France}{}{
+	\begin{itemize}
+    \resitem{Développement de l'espace service}
+    \resitem{Ajout de fonctionnalités dans le back-office}
+    \resitem{\textit{Languages}: Java}
+    \resitem{\textit{Tools}: Tapestry, Spring, Hibernate, Maven, Cruise Control}
+	\end{itemize}
+}
+
+%----------------------------------------------------------------------------------
+
+\espace
+
+%----------------------------------------------------------------------------------
+
+\section{Projets open source}
+
+\cventry{2010-2011}{Shaker}{}{Outil de build interactif pour les projets Haskell}{}{
+	\begin{itemize}
+    \resitem{Création de Shaker, un outil de build interactif en Haskell}
+    \resitem{Utilisation GHC pour détecter et exécuter les tests}
+    \resitem{\textit{Tools}: Haskell, Quickcheck, GHC, Cabal}
+	\end{itemize}
+}
+
+\espace
+
+\cventry{2009-2011}{IzPack}{Contributions}{}{}{
+	\begin{itemize}
+    \resitem{Refonte et refactoring du code}
+    \resitem{Remplacement du l'ancien système de build par Maven}
+    \resitem{Écriture de tests de non régression}
+    \resitem{Ajout d'un framework d'injection de dépendance}
+    \resitem{\textit{Tools}: IntelliJ, Maven, Junit, Mockito, Picocontainer, YourKit}
+	\end{itemize}
+}
+
+%----------------------------------------------------------------------------------
+
+\espace
+
+%----------------------------------------------------------------------------------
+
+\section{Compétences}
+\cvline{Langages}{Python, Java, Haskell, Erlang, Web (XHTML, CSS, javascript), C, C++}
+\cvline{Systèmes}{Linux (Debian, Gentoo), FreeBSD}
+\cvline{Base de données}{PostgreSQL, MySQL, HBase, Mnesia, Redis}
+\cvline{Éditeurs}{IntelliJ, Vim}
+\cvline{Outils}{Nagios, Munin, Cacti, HAProxy, Varnish}
+\cvline{Autres}{Hadoop, RabbitMQ, OpenCL, OpenGL}
+
+\section{Langues}
+\cvline{Français}{Langue maternelle}
+\cvline{Anglais}{TOEIC 920}
+\cvline{Japonais}{notions}
+
+\section{Loisirs}
+\cvline{}{Lecture, Jeux de rôles, jeux vidéos}
+
+\end{document}
